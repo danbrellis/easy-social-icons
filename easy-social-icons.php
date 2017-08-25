@@ -71,7 +71,7 @@ function cnss_my_script() {
 	global $pluginsURI;
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script('jquery-ui-sortable');
-	wp_register_script('cnss_js', $pluginsURI . 'js/cnss.js', array(), '1.0' );
+	wp_register_script('cnss_js', $pluginsURI . 'js/cnss.js', array('jquery'), '1.0' );
 	wp_enqueue_script( 'cnss_js' );	
 	
 	wp_register_style('cnss_css', $pluginsURI . 'css/cnss.css', array(), '1.0' );
@@ -81,7 +81,7 @@ function cnss_my_script() {
 function cnss_admin_enqueue() {
 	global $pluginsURI;
 	wp_enqueue_media();
-	wp_register_script('cnss_admin_js', $pluginsURI . 'js/cnss_admin.js', array(), '1.0' );
+	wp_register_script('cnss_admin_js', $pluginsURI . 'js/cnss_admin.js', array('jquery'), '1.0' );
 	wp_enqueue_script( 'cnss_admin_js' );	
 }
 
